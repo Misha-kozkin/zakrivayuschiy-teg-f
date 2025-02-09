@@ -1,1 +1,49 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --fint-family: 'Inter-Variable';
+  --accent-fint-family: 'PressStart2P';
+  --font-weight-small: 400;
+  --font-weight-bold: 700;
+  --none: none;
+
+  --inlin-size: clamp(371px, -0.5rem + 101.2vw, 700px);
+
+  --accent-light-color: #fff;
+  --accent-dark-color: #000;
+  --heart-accent-color: #f00;
+  --transparent-dark-color: rgba(0 0 0 / 0.7);
+
+  --gradient-color-to-right: #d3d3d3;
+  --transparent-color: rgba(0 0 0 / 0);
+  --gradient-color-to-top-light: #e7e7e7;
+  --gradient-color-to-top-dark: #1a1a1a;
+
+  --text-shadow: 1px 0 0 var(--accent-light-color),
+    1px 0 0 var(--accent-light-color), 0 1px 0 var(--accent-light-color),
+    0 1px 0 var(--accent-light-color), -1px 0 0 var(--accent-light-color),
+    -1px 0 0 var(--accent-light-color), 0 -1px 0 var(--accent-light-color),
+    0 -1px 0 var(--accent-light-color);
+
+  --background-gradient: repeating-linear-gradient(
+      to right,
+      var(--transparent-color) 0,
+      var(--gradient-color-to-right) 1px,
+      var(--gradient-color-to-right) 2px,
+      var(--transparent-color) 3px,
+      var(--transparent-color) 4px
+    ),
+    repeating-linear-gradient(
+      to top,
+      var(--transparent-color) 0,
+      var(--gradient-color-to-top-light) 1px,
+      var(--gradient-color-to-top-dark) 2px,
+      var(--transparent-color) 3px,
+      var(--transparent-color) 4px
+    ),
+    linear-gradient(
+      to top,
+      var(--gradient-color-to-top-dark),
+      var(--gradient-color-to-top-light)
+    );
+}
