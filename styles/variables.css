@@ -1,13 +1,13 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --fint-family: 'Inter-Variable';
-  --accent-fint-family: 'PressStart2P';
+  --fint-family: 'Inter-Variable', sans-serif;
+  --accent-fint-family: 'PressStart2P', fantasy, sans-serif;
   --font-weight-small: 400;
   --font-weight-bold: 700;
   --none: none;
 
-  --inlin-size: clamp(371px, -0.5rem + 101.2vw, 700px);
+  --inlin-size: clamp(min(100%,371px), -0.5rem + 101.2vw, 700px);
 
   --accent-light-color: #fff;
   --accent-dark-color: #000;

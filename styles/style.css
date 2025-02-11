@@ -27,6 +27,7 @@
   display: grid;
   margin: 0 auto 100px;
   inline-size: var(--inlin-size);
+  block-size: clamp(327px, 17.4rem + 12.6vw, 368px);
   border: 2px solid var(--accent-dark-color);
   justify-content: center;
   font-family: var(--accent-fint-family);
@@ -36,7 +37,7 @@
 
 .header__logo {
   font-size: clamp(49px, 1.9rem + 4.9vw, 65px);
-  margin: 128px 0 20px;
+  margin: clamp(120px, 6.9rem + 2.4vw, 128px) 0 20px;
   text-decoration: none;
   outline: none;
 }
@@ -86,21 +87,22 @@
   position: absolute;
   top: 0;
   right: 0;
-  padding: 24px clamp(15px, 0.2rem + 3vw, 25px);
+  padding: clamp(20px, 1rem + .9vw, 23px) clamp(10px, -0.3rem + 4.3vw, 24px);
   font-family: var(--accent-fint-family);
   font-size: 14px;
   font-weight: var(--font-weight-small);
   text-transform: uppercase;
   text-shadow: var(--text-shadow);
   opacity: 0.5;
-  -webkit-text-stroke: 1px var(--accent-light-color);
   z-index: 1;
 }
 
-@supports (text-stroke: 1px var(--accent-light-color)) {
-
+@supports (text-stroke: 1px var(--accent-light-color)) or 
+(-webkit-text-stroke: 1px var(--accent-light-color)) {
   .card__image-label {
     text-stroke: 1px var(--accent-light-color);
+    -webkit-text-stroke: 1px var(--accent-light-color);
+    text-shadow: none;
   }
 }
 
@@ -154,11 +156,15 @@
 }
 
 .card__icon-button {
+  display: grid;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   border: none;
   background-color: transparent;
   outline: none;
   cursor: pointer;
+  block-size: 37px;
 }
 
 .card__icon-button:focus-visible {
@@ -276,7 +282,11 @@
 }
 
 .floppy-icon {
+  position: relative;
+  inset: 0;
+  z-index: 1;
   mix-blend-mode: difference;
+  fill: var(--accent-light-color);
   inline-size: 21px;
   block-size: 21px;
 }
@@ -301,7 +311,7 @@
   display: grid;
   grid-template-columns: 40px 1fr;
   align-items: center;
-  column-gap: 10px;
+  column-gap: 20px;
   row-gap: 30px;
   margin: 30px;
 }
@@ -311,6 +321,7 @@
 }
 
 .dialog__floppy-icon {
+  fill: var(--accent-dark-color);
   inline-size: 40px;
   block-size: 40px;
 }
@@ -318,6 +329,7 @@
 .dialog__button {
   inline-size: 293px;
   block-size: 38px;
+  text-transform: uppercase;
 }
 
 @media (width <= 375px) {
