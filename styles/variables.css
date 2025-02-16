@@ -6,6 +6,7 @@
   --font-weight-small: 400;
   --font-weight-bold: 700;
   --none: none;
+  --transition-ease: 0.3s ease;
 
   --inlin-size: clamp(min(100%,371px), -0.5rem + 101.2vw, 700px);
 
@@ -25,25 +26,17 @@
     -1px 0 0 var(--accent-light-color), 0 -1px 0 var(--accent-light-color),
     0 -1px 0 var(--accent-light-color);
 
-  --background-gradient: repeating-linear-gradient(
-      to right,
-      var(--transparent-color) 0,
-      var(--gradient-color-to-right) 1px,
-      var(--gradient-color-to-right) 2px,
-      var(--transparent-color) 3px,
-      var(--transparent-color) 4px
-    ),
-    repeating-linear-gradient(
-      to top,
-      var(--transparent-color) 0,
-      var(--gradient-color-to-top-light) 1px,
-      var(--gradient-color-to-top-dark) 2px,
-      var(--transparent-color) 3px,
-      var(--transparent-color) 4px
-    ),
-    linear-gradient(
-      to top,
-      var(--gradient-color-to-top-dark),
-      var(--gradient-color-to-top-light)
-    );
+  --background-gradient:
+  repeating-linear-gradient(
+    90deg, 
+    var(--gradient-color-to-right) 0 2px, 
+    var(--transparent-color) 2px 4px ), 
+  repeating-linear-gradient(
+    0deg, 
+    var(--gradient-color-to-right) 0 2px, 
+    var(--transparent-color) 2px 4px ), 
+  linear-gradient( 
+    var(--gradient-color-to-top-light) 0%, 
+    var(--gradient-color-to-top-light) 0.1%, 
+    var(--gradient-color-to-top-dark) 100% );
 }
