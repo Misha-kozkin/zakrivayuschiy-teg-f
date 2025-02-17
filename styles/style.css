@@ -72,7 +72,7 @@
 
 .card__title {
   font-size: 18px;
-  font-weight: var(--font-weight-bold);
+  font-variation-settings: 'wght' var(--font-weight-bold);
   margin: 5px 10px;
 }
 
@@ -145,7 +145,6 @@
   gap: 24px;
   margin: 25px;
   font-size: 18px;
-  font-weight: var(--font-weight-small);
   line-height: 118%;
 }
 
